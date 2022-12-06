@@ -1,0 +1,23 @@
+.btn {
+  --clr: var(--clr-neutral-200);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1;
+  padding: 1em 2em;
+  background-color: var(--clr);
+  border: none;
+  text-transform: capitalize;
+  outline: 1px solid var(--clr);
+
+  // for pill shape
+  border-radius: 100vw;
+  transition: 250ms ease;
+  cursor: pointer;
+
+  &:is(:hover, :focus) {
+    background-color: transparent;
+    color: var(--clr) !important;
+  }
+}

@@ -1,7 +1,14 @@
+import Card from "./components/Card/Card";
+import data from "./data";
+
 export default function App() {
+  const cards = data.map((item) => {
+    return <Card key={item.id} {...item} />;
+  });
+
   return (
-    <div>
-      <h1>3-column preview card component</h1>
-    </div>
-  )
+    <main>
+      <div className="wrapper">{cards}</div>
+    </main>
+  );
 }
